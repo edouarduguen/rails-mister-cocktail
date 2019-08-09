@@ -1,0 +1,7 @@
+<div class="container">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient, collection: @ingredients, include_hidden: false%>
+    <%= f.button :submit, class: "btn btn-primary"%>
+  <% end %>
+</div>
